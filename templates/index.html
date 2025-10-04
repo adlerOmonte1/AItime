@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronóstico Climatológico</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pronóstico Climatológico</h1>
+            <p>Usa tu ubicación actual o ingresa coordenadas y una fecha para obtener una predicción climatológica basada en 10 años de datos y compararla con datos reales históricos.</p>
+        </header>
+
+        <main>
+            <div id="map"></div>
+            
+            <div class="form-container">
+                <button id="get-location-btn">📍 Usar mi Ubicación Actual</button>
+                <p>- O -</p>
+                <input type="text" id="manual-lat" placeholder="Latitud (ej. -9.93)">
+                <input type="text" id="manual-lon" placeholder="Longitud (ej. -76.24)">
+                <input type="date" id="manual-date"> 
+                <button id="get-manual-btn">Consultar Datos</button>
+            </div>
+
+            <div class="results" id="results">
+                </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
